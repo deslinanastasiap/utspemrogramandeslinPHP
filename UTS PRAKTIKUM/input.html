@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Input</title>
+</head>
+<body>
+
+<h1>Program Visualisasi Persegi Panjang</h1>
+
+<h3>Masukan Panjang dan Lebar Persegi Panjang</h3>
+
+<form action="persegiPanjang.php">
+	Panjang : <input type="number" name="panjang">
+	Lebar : <input type="number" name="lebar">
+	<br><br>
+	Warna : <select name="warna">
+		<option selected>Putih</option>
+		<option>Merah</option>
+		<option>Hitam</option>
+		<option>Hijau</option>
+		<option>Biru</option>
+		<option>Kuning</option>
+	</select>
+	<br>
+	<br>
+	<input type="submit" value="Cetak Bentuk">
+</form>
+
+<p>
+	Percabangan digunakan untuk memeriksa hasil input.Input yang diperbolehkan adalah yang bernilai lebih dari 0 (tidak bisa angka negatif). input juga tidak boleh kosong
+</p>
+<p>
+	Terdapat 2 buah function, yaitu UbahWarna dan CetakPersegiPanjang.
+</p>
+<p> 
+	function UbahWarna membutuhkan 1 parameter yaitu $warna. parameter $warna akan di ubah oleh switch case menjadi sebuah kode warna hexadecimal. kode warna tersebut yang akan di return oleh fungsi ini.
+</p>
+<p>
+	function CetakPersegiPanjang mebutuhkan 3 parameter yaitu $panjang, $lebar,dan $warna. didalamnya terdapat Perulangan yang digunakan untuk membuat tabel secara otomatis sesuai $panjang dan $lebar yang dimasukan.<br> 
+	Perulangan pertama untuk membuat baris, perulangan kedua yang berada di dalam perulangan pertama digunakan untuk membuat kolom. baris diulang sebanyak $lebar, dan kolom sebanyak input $panjang. warna dari kolom ditentukan berdasarkan parameter $warna
+</p>
+
+</body>
+</html>
